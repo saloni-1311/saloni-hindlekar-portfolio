@@ -258,3 +258,38 @@ h2 em, h1 em { color: var(--brown-500); font-weight: 500; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Mobile polish: keep browser tap/visited colours within the portfolio palette. */
+a, a:visited, a:active {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+button, input, textarea, select {
+  -webkit-tap-highlight-color: transparent;
+}
+.hero-tags {
+  color: var(--brown-700);
+  -webkit-tap-highlight-color: transparent;
+}
+.hero-tags i {
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 7px;
+    max-width: 100%;
+    font-size: 8px;
+    letter-spacing: .14em;
+    margin: 23px 0 28px;
+  }
+  .hero-tags i {
+    color: var(--gold);
+    font-size: 12px;
+  }
+}
